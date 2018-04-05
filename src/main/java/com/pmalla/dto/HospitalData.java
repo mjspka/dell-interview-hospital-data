@@ -31,6 +31,15 @@ public class HospitalData {
 	@JsonProperty("location")
 	private HospitalLocation hospitalLocation;
 
+	@JsonProperty("location_address")
+	private String locationAddress;
+
+	@JsonProperty("location_city")
+	private String locationCity;
+
+	@JsonProperty("location_state")
+	private String locationState;
+
 	/**
 	 * @return the uid
 	 */
@@ -137,6 +146,9 @@ public class HospitalData {
 		result = prime * result + ((facilityName == null) ? 0 : facilityName.hashCode());
 		result = prime * result + ((facilityType == null) ? 0 : facilityType.hashCode());
 		result = prime * result + ((hospitalLocation == null) ? 0 : hospitalLocation.hashCode());
+		result = prime * result + ((locationAddress == null) ? 0 : locationAddress.hashCode());
+		result = prime * result + ((locationCity == null) ? 0 : locationCity.hashCode());
+		result = prime * result + ((locationState == null) ? 0 : locationState.hashCode());
 		result = prime * result + ((oshpdId == null) ? 0 : oshpdId.hashCode());
 		result = prime * result + ((services == null) ? 0 : services.hashCode());
 		result = prime * result + ((uid == null) ? 0 : uid.hashCode());
@@ -172,6 +184,21 @@ public class HospitalData {
 				return false;
 		} else if (!hospitalLocation.equals(other.hospitalLocation))
 			return false;
+		if (locationAddress == null) {
+			if (other.locationAddress != null)
+				return false;
+		} else if (!locationAddress.equals(other.locationAddress))
+			return false;
+		if (locationCity == null) {
+			if (other.locationCity != null)
+				return false;
+		} else if (!locationCity.equals(other.locationCity))
+			return false;
+		if (locationState == null) {
+			if (other.locationState != null)
+				return false;
+		} else if (!locationState.equals(other.locationState))
+			return false;
 		if (oshpdId == null) {
 			if (other.oshpdId != null)
 				return false;
@@ -198,6 +225,53 @@ public class HospitalData {
 	@Override
 	public String toString() {
 		return "HospitalData [uid=" + uid + ", oshpdId=" + oshpdId + ", facilityType=" + facilityType + ", services="
-				+ services + ", facilityName=" + facilityName + ", hospitalLocation=" + hospitalLocation + "]";
+				+ services + ", facilityName=" + facilityName + ", hospitalLocation=" + hospitalLocation
+				+ ", locationAddress=" + locationAddress + ", locationCity=" + locationCity + ", locationState="
+				+ locationState + "]";
+	}
+
+	/**
+	 * @return the locationAddress
+	 */
+	public String getLocationAddress() {
+		return locationAddress;
+	}
+
+	/**
+	 * @param locationAddress
+	 *            the locationAddress to set
+	 */
+	public void setLocationAddress(String locationAddress) {
+		this.locationAddress = locationAddress;
+	}
+
+	/**
+	 * @return the locationCity
+	 */
+	public String getLocationCity() {
+		return locationCity;
+	}
+
+	/**
+	 * @param locationCity
+	 *            the locationCity to set
+	 */
+	public void setLocationCity(String locationCity) {
+		this.locationCity = locationCity;
+	}
+
+	/**
+	 * @return the locationState
+	 */
+	public String getLocationState() {
+		return locationState;
+	}
+
+	/**
+	 * @param locationState
+	 *            the locationState to set
+	 */
+	public void setLocationState(String locationState) {
+		this.locationState = locationState;
 	}
 }
