@@ -35,6 +35,8 @@ cd dell-interview-hospital-data
 ### How to access the api?
 If you are running the application locally. Please refer the API from the [URL](http://localhost:8080/swagger-ui.html). 
 
+FYI: The actual API for fetching hospital data is http://localhost:8080/hospitals?cityCode=SFO
+
 # Features
 ### Swagger
 Swagger is added to the project. All the api's that are part of this micro-service can be viewed from URL, <server-ip/host-name>:8080/swagger-ui.html
@@ -43,7 +45,8 @@ Swagger is added to the project. All the api's that are part of this micro-servi
 Cache is added to the rest api. FYI: The cache will be automatically evicted every 1 minute.
 
 ###jUnits
-All the code is covered with jUnits
+All the code is covered with jUnits. I have an example of integration test and also with Mock objects. The jUnit on service layer is integration test. The jUnit on controller is based of Mock objects.
+
 
 # Contributors
 
